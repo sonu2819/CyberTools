@@ -11,7 +11,11 @@ body {
   overflow-x: hidden;
 }
 
-/* FORCE WHITE TEXT ON MOBILE */
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+}
 
 input,
 textarea,
@@ -34,10 +38,6 @@ a {
 .checks label,
 .slider-box label {
   color: #ffffff !important;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 /* APP */
@@ -91,7 +91,7 @@ a {
   -webkit-text-fill-color: transparent !important;
 }
 
-/* NAV LINKS */
+/* NAV */
 
 nav {
   display: flex;
@@ -134,22 +134,22 @@ nav a:hover {
   margin: 0;
 }
 
-/* MAIN LAYOUT */
+/* LAYOUT */
 
 .layout {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+
+  grid-template-columns: repeat(2, 1fr);
+
   gap: 24px;
+
   width: 100%;
 }
 
-/* SIDES */
+/* FULL WIDTH */
 
-.left,
-.right {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.full-width {
+  grid-column: span 2;
 }
 
 /* CARDS */
@@ -164,15 +164,13 @@ nav a:hover {
   padding: 28px;
 
   transition: 0.25s ease;
+
+  min-height: 320px;
 }
 
 .card:hover {
   transform: translateY(-3px);
   border-color: #334155;
-}
-
-.big-card {
-  min-height: 100%;
 }
 
 .card h2 {
@@ -196,10 +194,11 @@ nav a:hover {
   width: 100%;
 }
 
-/* CHECKBOXES */
+/* CHECKS */
 
 .checks {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
 
   gap: 14px;
@@ -210,11 +209,10 @@ nav a:hover {
 .checks label {
   display: flex;
   align-items: center;
-
   gap: 10px;
 }
 
-/* RESULT BOX */
+/* RESULT */
 
 .result-box,
 .ip-box {
@@ -236,8 +234,6 @@ nav a:hover {
 
   word-break: break-word;
 }
-
-/* OUTPUT */
 
 .output {
   margin-top: 20px;
@@ -301,7 +297,7 @@ button:hover {
 textarea {
   width: 100%;
 
-  min-height: 140px;
+  min-height: 100px;
 
   background: #020617;
 
@@ -400,6 +396,10 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
+  .full-width {
+    grid-column: span 1;
+  }
+
   .hero {
     padding: 50px 0;
   }
@@ -465,9 +465,14 @@ textarea:focus {
     gap: 18px;
   }
 
+  .full-width {
+    grid-column: span 1;
+  }
+
   .card {
     padding: 20px;
     border-radius: 20px;
+    min-height: auto;
   }
 
   .card h2 {
