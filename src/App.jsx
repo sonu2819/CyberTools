@@ -1,272 +1,159 @@
-import { useState } from "react";
 import "./App.css";
 
 export default function App() {
-  const [password, setPassword] = useState("");
-  const [length, setLength] = useState(16);
-
-  const [useUpper, setUseUpper] = useState(true);
-  const [useLower, setUseLower] = useState(true);
-  const [useNumbers, setUseNumbers] = useState(true);
-  const [useSymbols, setUseSymbols] = useState(true);
-
-  const [text, setText] = useState("");
-  const [result, setResult] = useState("");
-
-  const [ip, setIp] = useState("");
-
-  // PASSWORD GENERATOR
-  const generatePassword = () => {
-    let chars = "";
-
-    if (useUpper) chars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    if (useLower) chars += "abcdefghijklmnopqrstuvwxyz";
-    if (useNumbers) chars += "0123456789";
-    if (useSymbols) chars += "@#$!%&*";
-
-    // FIX
-    if (!chars) {
-      alert("Select at least one option");
-      return;
-    }
-
-    let pass = "";
-
-    for (let i = 0; i < length; i++) {
-      pass += chars[Math.floor(Math.random() * chars.length)];
-    }
-
-    setPassword(pass);
-  };
-
-  // COPY
-  const copyText = (value) => {
-    if (!value) return;
-
-    navigator.clipboard.writeText(value);
-    alert("Copied!");
-  };
-
-  // BASE64
-  const encode = () => {
-    setResult(btoa(text));
-  };
-
-  const decode = () => {
-    try {
-      setResult(atob(text));
-    } catch {
-      setResult("Invalid Base64");
-    }
-  };
-
-  const clearText = () => {
-    setText("");
-    setResult("");
-  };
-
-  // IP
-  const getIP = async () => {
-    try {
-      const res = await fetch("https://api.ipify.org?format=json");
-      const data = await res.json();
-      setIp(data.ip);
-    } catch {
-      setIp("Failed to fetch IP");
-    }
-  };
-
   return (
     <div className="app">
 
       {/* NAVBAR */}
       <header className="navbar">
-        <div className="logo">⚡ CyberTools</div>
 
-        <nav>
-          <a href="#tools">Tools</a>
-          <a href="#about">About</a>
-        </nav>
+        <div className="logo">
+          ⚡ CyberTools
+        </div>
+
+     <nav>
+
+  <a href="/">
+    Home
+  </a>
+
+  <a href="/#tools">
+    Tools
+  </a>
+
+  <a href="/about">
+    About
+  </a>
+
+  <a href="/contact">
+    Contact
+  </a>
+
+</nav>
       </header>
 
       {/* HERO */}
       <section className="hero">
-        <h1>Free Cyber Tools</h1>
-        <p>Fast utilities for developers & students</p>
+
+        <h1>
+          Free Cyber Tools
+        </h1>
+
+        <p>
+          Fast utilities for developers & students
+        </p>
+
       </section>
 
-{/* MAIN */}
-<section id="tools" className="layout">
+      {/* TOOLS */}
+     <section
+  id="tools"
+  className="layout"
+>
 
-  {/* IP */}
-  <div className="card">
-
-    <h2>🌐 IP Checker</h2>
-
-    <div className="ip-box">
-
-      <span>
-        {ip || "Check your IP address"}
-      </span>
-
-      {ip && (
-        <button
-          className="copy-btn"
-          onClick={() => copyText(ip)}
-        >
-          📋
-        </button>
-      )}
-
-    </div>
-
-    <button onClick={getIP}>
-      Check My IP
-    </button>
-
-  </div>
-
-  {/* PASSWORD */}
-  <div className="card">
-
+  <a
+    href="/password-generator"
+    className="card link-card"
+  >
     <h2>🔑 Password Generator</h2>
 
-    {/* SLIDER */}
-    <div className="slider-box">
+    <p>
+      Generate strong and secure passwords instantly.
+    </p>
+  </a>
 
-      <label>
-        Password Length: {length}
-      </label>
+  <a
+    href="/ip-checker"
+    className="card link-card"
+  >
+    <h2>🌐 IP Checker</h2>
 
-      <input
-        type="range"
-        min="6"
-        max="32"
-        value={length}
-        onChange={(e) =>
-          setLength(Number(e.target.value))
-        }
-      />
+    <p>
+      Check your public IP address online.
+    </p>
+  </a>
 
-    </div>
-
-    {/* CHECKBOXES */}
-    <div className="checks">
-
-      <label>
-        <input
-          type="checkbox"
-          checked={useUpper}
-          onChange={() =>
-            setUseUpper(!useUpper)
-          }
-        />
-        A-Z
-      </label>
-
-      <label>
-        <input
-          type="checkbox"
-          checked={useLower}
-          onChange={() =>
-            setUseLower(!useLower)
-          }
-        />
-        a-z
-      </label>
-
-      <label>
-        <input
-          type="checkbox"
-          checked={useNumbers}
-          onChange={() =>
-            setUseNumbers(!useNumbers)
-          }
-        />
-        0-9
-      </label>
-
-      <label>
-        <input
-          type="checkbox"
-          checked={useSymbols}
-          onChange={() =>
-            setUseSymbols(!useSymbols)
-          }
-        />
-        Symbols
-      </label>
-
-    </div>
-
-    {/* RESULT */}
-    <div className="result-box">
-
-      <span>
-        {password || "Generate password..."}
-      </span>
-
-      <button
-        className="copy-btn"
-        onClick={() => copyText(password)}
-      >
-        📋
-      </button>
-
-    </div>
-
-    {/* BUTTON */}
-    <button
-      className="main-btn"
-      onClick={generatePassword}
-    >
-      Generate Password
-    </button>
-
-  </div>
-
-  {/* BASE64 */}
-  <div className="card full-width">
-
+  <a
+    href="/base64-tool"
+    className="card link-card"
+  >
     <h2>🔄 Base64 Tool</h2>
 
-    <textarea
-      placeholder="Enter text to encode/decode..."
-      value={text}
-      onChange={(e) => setText(e.target.value)}
-    />
+    <p>
+      Encode and decode Base64 text easily.
+    </p>
+  </a>
 
-    <div className="btn-row">
+<a
+  href="/uuid-generator"
+  className="card link-card"
+>
 
-      <button onClick={encode}>
-        Encode
-      </button>
+  <h2>
+    🆔 UUID Generator
+  </h2>
 
-      <button onClick={decode}>
-        Decode
-      </button>
+  <p>
+    Generate random UUIDs instantly.
+  </p>
 
-      <button onClick={clearText}>
-        Clear
-      </button>
+</a>
 
-    </div>
+<a
+  href="/json-formatter"
+  className="card link-card"
+>
 
-    {result && (
-      <div className="output">
-        {result}
-      </div>
-    )}
+  <h2>
+    📦 JSON Formatter
+  </h2>
 
-  </div>
+  <p>
+    Format and validate JSON instantly.
+  </p>
+
+</a>
+
+<a
+  href="/qr-generator"
+  className="card link-card"
+>
+
+  <h2>
+    📱 QR Generator
+  </h2>
+
+  <p>
+    Generate QR codes online instantly.
+  </p>
+
+</a>
+
 
 </section>
+
       
 
       {/* FOOTER */}
-      <footer id="about" className="footer">
-        Built for fast daily use ⚡
-      </footer>
+    <footer className="footer">
+
+  <a href="/about">
+    About
+  </a>
+
+  {" • "}
+
+  <a href="/privacy-policy">
+    Privacy Policy
+  </a>
+
+  {" • "}
+
+  <a href="/contact">
+    Contact
+  </a>
+
+</footer>
 
     </div>
   );
