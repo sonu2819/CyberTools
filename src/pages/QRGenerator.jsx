@@ -1,7 +1,7 @@
 import { useState } from "react";
 import QRCode from "qrcode";
 import "../App.css";
-
+import { Helmet } from "react-helmet";
 export default function QRGenerator() {
 
   const [text, setText] =
@@ -22,6 +22,24 @@ export default function QRGenerator() {
   };
 
   return (
+<>
+
+      <Helmet>
+
+    <title>
+      QR Code Generator - CyberTools
+    </title>
+
+    <meta
+      name="description"
+      content="Generate QR codes online instantly for URLs, text and business use."
+    />
+  <meta
+  name="keywords"
+  content="QR code generator, free QR generator, online QR tool"
+  />
+
+  </Helmet>
 
     <div className="app tool-page">
 
@@ -98,11 +116,57 @@ export default function QRGenerator() {
 
       </section>
 
+
+      {/* INFO SECTION */}
+<section className="info-section">
+
+  <h2>
+    What is a QR Code?
+  </h2>
+
+  <p>
+    A QR code is a scannable barcode used to store links,
+    text, contact details, WiFi credentials, and other information.
+  </p>
+
+  <h2>
+    Why Use This QR Generator?
+  </h2>
+
+  <p>
+    This free QR code generator allows you to create QR codes instantly
+    for websites, text, social media links, and business purposes.
+  </p>
+
+  <h2>
+    How to Use
+  </h2>
+
+  <ul>
+
+    <li>
+      Enter text or a URL into the input field
+    </li>
+
+    <li>
+      Click Generate QR Code
+    </li>
+
+    <li>
+      Scan or download the generated QR code
+    </li>
+
+  </ul>
+
+</section>
+
       {/* FOOTER */}
       <footer className="footer">
         Built with ⚡ CyberTools
       </footer>
 
     </div>
+
+    </>
   );
 }

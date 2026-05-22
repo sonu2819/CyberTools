@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../App.css";
+import { Helmet } from "react-helmet";
 
 export default function Password() {
 
@@ -26,6 +27,23 @@ export default function Password() {
   };
 
   return (
+<><Helmet>
+
+  <title>
+    Password Generator - CyberTools
+  </title>
+
+  <meta
+    name="description"
+    content="Generate strong secure passwords instantly online using CyberTools free password generator."
+  />
+
+  <meta
+    name="keywords"
+    content="password generator, strong password generator, secure password generator, random password tool"
+  />
+
+</Helmet>
 
     <div className="app tool-page">
 
@@ -83,11 +101,58 @@ export default function Password() {
 
       </section>
 
+
+
+       <section className="info-section">
+
+        <h2>
+          What is a Password Generator?
+        </h2>
+
+        <p>
+          A password generator creates strong and secure passwords automatically.
+          Strong passwords help protect your online accounts from hacking,
+          brute-force attacks, and unauthorized access.
+        </p>
+
+        <h2>
+          Why Use This Password Generator?
+        </h2>
+
+        <p>
+          This free online password generator helps you create random passwords
+          instantly. It combines uppercase letters, lowercase letters,
+          numbers, and special characters to improve security.
+        </p>
+
+        <h2>
+          How to Use
+        </h2>
+
+        <ul>
+
+          <li>
+            Click the "Generate Password" button
+          </li>
+
+          <li>
+            A strong random password will appear instantly
+          </li>
+
+          <li>
+            Copy and use the password for your accounts securely
+          </li>
+
+        </ul>
+
+      </section>
+
       {/* FOOTER */}
       <footer className="footer">
         Built with ⚡ CyberTools
       </footer>
 
     </div>
+    </>
   );
 }

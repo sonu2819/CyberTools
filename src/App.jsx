@@ -1,7 +1,29 @@
 import "./App.css";
+import { Helmet } from "react-helmet";
 
 export default function App() {
   return (
+<>
+
+  <Helmet>
+
+    <title>
+      CyberTools - Free Online Developer Tools
+    </title>
+
+    <meta
+      name="description"
+      content="Free online developer tools including password generator, JSON formatter, QR generator, Base64 tools, UUID generator and IP checker."
+    />
+
+    <meta
+      name="keywords"
+      content="cyber tools, password generator, json formatter, qr generator, uuid generator, ip checker, base64 tool, developer tools, online utilities"
+    />
+
+  </Helmet>
+
+
     <div className="app">
 
      {/* NAVBAR */}
@@ -168,6 +190,6 @@ export default function App() {
 
 </footer>
 
-    </div>
+    </div></>
   );
 }

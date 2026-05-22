@@ -751,3 +751,21 @@ textarea {
 .menu a:hover{
   color:#6c7cff;
 }
+
+
+
+.info-section {
+  max-width: 800px;
+  margin: 50px auto;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+.info-section h2 {
+  margin-top: 30px;
+  color: white;
+}
+
+.info-section ul {
+  padding-left: 20px;
+}
