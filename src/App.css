@@ -142,7 +142,7 @@ a {
 
 /* LOGO */
 
-.logo {
+/* .logo {
   font-size: 28px;
   font-weight: 800;
 
@@ -154,6 +154,47 @@ a {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+} */
+
+
+.logo{
+  font-size:32px;
+
+  font-weight:800;
+
+  background:linear-gradient(
+    270deg,
+    #60a5fa,
+    #8b5cf6,
+    #22d3ee,
+    #60a5fa
+  );
+
+  background-size:600% 600%;
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+  animation:logoGlow 8s ease infinite;
+}
+
+/* ANIMATION */
+
+@keyframes logoGlow{
+
+  0%{
+    background-position:0% 50%;
+  }
+
+  50%{
+    background-position:100% 50%;
+  }
+
+  100%{
+    background-position:0% 50%;
+  }
+
 }
 
 /* NAV */
