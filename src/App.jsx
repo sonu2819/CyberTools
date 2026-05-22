@@ -4,33 +4,46 @@ export default function App() {
   return (
     <div className="app">
 
-      {/* NAVBAR */}
-      <header className="navbar">
+     {/* NAVBAR */}
+<header className="navbar">
 
-        <div className="logo">
-          ⚡ CyberTools
-        </div>
+  <div className="logo">
+    ⚡ CyberTools
+  </div>
 
-     <nav>
+  <input
+    type="checkbox"
+    id="menu-toggle"
+  />
 
-  <a href="/">
-    Home
-  </a>
+  <label
+    htmlFor="menu-toggle"
+    className="hamburger"
+  >
+    ☰
+  </label>
 
-  <a href="/#tools">
-    Tools
-  </a>
+  <div className="menu">
 
-  <a href="/about">
-    About
-  </a>
+    <a href="/">
+      Home
+    </a>
 
-  <a href="/contact">
-    Contact
-  </a>
+    <a href="/#tools">
+      Tools
+    </a>
 
-</nav>
-      </header>
+    <a href="/about">
+      About
+    </a>
+
+    <a href="/contact">
+      Contact
+    </a>
+
+  </div>
+
+</header>
 
       {/* HERO */}
       <section className="hero">

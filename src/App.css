@@ -433,7 +433,6 @@ button:hover {
 }
 
 /* MOBILE */
-
 @media (max-width: 700px) {
 
   .hero h1 {
@@ -445,14 +444,9 @@ button:hover {
   }
 
   .navbar {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .layout {
@@ -475,7 +469,6 @@ button:hover {
     width: 100%;
   }
 }
-
 
 
 
@@ -620,4 +613,100 @@ textarea {
     padding: 22px;
   }
 
+}
+
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px 30px;
+
+  position:relative;
+
+  margin-bottom:70px;
+
+  background:linear-gradient(
+    135deg,
+    rgba(15,23,42,0.95),
+    rgba(30,41,59,0.92)
+  );
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:22px;
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,0.35);
+}
+
+/* LOGO */
+.logo{
+  color:#6c7cff;
+
+  font-size:32px;
+
+  font-weight:700;
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle{
+  display:none;
+}
+
+/* HAMBURGER */
+.hamburger{
+  color:white;
+
+  font-size:34px;
+
+  cursor:pointer;
+
+  line-height:1;
+}
+
+/* MENU */
+.menu{
+  position:absolute;
+
+  top:85px;
+  right:20px;
+
+  background:#111827;
+
+  border-radius:14px;
+
+  padding:18px;
+
+  display:none;
+
+  flex-direction:column;
+
+  gap:14px;
+
+  min-width:180px;
+
+  z-index:1000;
+}
+
+/* SHOW MENU */
+#menu-toggle:checked ~ .menu{
+  display:flex;
+}
+
+/* MENU LINKS */
+.menu a{
+  color:white;
+
+  text-decoration:none;
+
+  font-size:18px;
+}
+
+.menu a:hover{
+  color:#6c7cff;
 }
