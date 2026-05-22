@@ -1,5 +1,6 @@
 import "./App.css";
 import { Helmet } from "react-helmet";
+import AdBanner from "./components/AdBanner";
 
 export default function App() {
   return (
@@ -69,6 +70,7 @@ export default function App() {
 
       {/* HERO */}
       <section className="hero">
+        
 
         <h1>
           Free Cyber Tools
@@ -79,6 +81,11 @@ export default function App() {
         </p>
 
       </section>
+      
+
+
+      {/* GOOD: not too aggressive */}
+<AdBanner />
 
       {/* TOOLS */}
      <section
@@ -166,6 +173,7 @@ export default function App() {
 
 
 </section>
+<AdBanner />
 
       
 
