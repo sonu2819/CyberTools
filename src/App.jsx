@@ -85,7 +85,7 @@ export default function App() {
 
 
       {/* GOOD: not too aggressive */}
-<AdBanner />
+
 
       {/* TOOLS */}
      <section
