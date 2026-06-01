@@ -90,7 +90,7 @@ ReactDOM.createRoot(
 
 <Route
   path="/password-strength-checker"
-  element={<PasswordStrengthChecker />}
+  element={<PasswordStrengthChecker/>}
 />
 <Route
   path="/url-encoder-decoder"
@@ -100,9 +100,6 @@ ReactDOM.createRoot(
   path="/jwt-decoder"
   element={<JWTDecoder />}
 />
-
-
-
 
 
 

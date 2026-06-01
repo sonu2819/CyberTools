@@ -173,7 +173,7 @@ export default function App() {
 </a>
 
 <a
-  href="/passwordstrengthchecker"
+  href="/password-strength-checker"
   className="card link-card"
 >
   <h2>
