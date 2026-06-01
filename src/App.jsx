@@ -12,15 +12,16 @@ export default function App() {
       CyberTools - Free Online Developer Tools
     </title>
 
-    <meta
-      name="description"
-      content="Free online developer tools including password generator, JSON formatter, QR generator, Base64 tools, UUID generator and IP checker."
-    />
+   <meta
+  name="description"
+  content="Free online developer and cybersecurity tools including Password Generator, Password Strength Checker, JWT Decoder, URL Encoder Decoder, JSON Formatter, QR Generator, UUID Generator, IP Checker and Base64 Tool."
+/>
 
     <meta
-      name="keywords"
-      content="cyber tools, password generator, json formatter, qr generator, uuid generator, ip checker, base64 tool, developer tools, online utilities"
-    />
+  name="keywords"
+  content="cyber tools, jwt decoder, url encoder decoder, password generator, password strength checker, json formatter, qr generator, uuid generator, ip checker, base64 tool, developer tools"
+/>
+    
 
   </Helmet>
 
@@ -171,6 +172,38 @@ export default function App() {
 
 </a>
 
+<a
+  href="/passwordstrengthchecker"
+  className="card link-card"
+>
+  <h2>
+    🔍 Password Strength Checker
+  </h2>
+
+  <p>
+    Test how secure your password is instantly.
+  </p>
+
+</a>
+
+<a
+  href="/url-encoder-decoder"
+  className="card link-card"
+>
+  <h2>🔗 URL Encoder / Decoder</h2>
+  <p>Encode and decode URLs instantly.</p>
+</a>
+
+<a
+  href="/jwt-decoder"
+  className="card link-card"
+>
+  <h2>📋 JWT Decoder</h2>
+
+  <p>
+    Decode JWT tokens instantly.
+  </p>
+</a>
 
 </section>
 <AdBanner />

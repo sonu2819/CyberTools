@@ -20,6 +20,11 @@ import QRGenerator from "./pages/QRGenerator";
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Contact from "./pages/Contact";
+import PasswordStrengthChecker from "./pages/PasswordStrengthChecker";
+import URLEncoderDecoder from "./pages/UrlEncoderDecoder";
+import JWTDecoder from "./pages/JWTDecoder";
+
+
 
 ReactDOM.createRoot(
   document.getElementById("root")
@@ -49,6 +54,7 @@ ReactDOM.createRoot(
         element={<Base64 />}
       />
 
+
       
 <Route
   path="/uuid-generator"
@@ -66,6 +72,7 @@ ReactDOM.createRoot(
   element={<QRGenerator />}
 />
 
+
 <Route
   path="/about"
   element={<About />}
@@ -81,7 +88,26 @@ ReactDOM.createRoot(
   element={<Contact />}
 />
 
+<Route
+  path="/password-strength-checker"
+  element={<PasswordStrengthChecker />}
+/>
+<Route
+  path="/url-encoder-decoder"
+  element={<URLEncoderDecoder />}
+/>
+<Route
+  path="/jwt-decoder"
+  element={<JWTDecoder />}
+/>
+
+
+
+
+
+
     </Routes>
+
 
     
 
