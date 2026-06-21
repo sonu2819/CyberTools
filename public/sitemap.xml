@@ -8,76 +8,27 @@
     <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://mycybertools.vercel.app/password-generator</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- DEV TOOLS -->
+  <url><loc>https://mycybertools.vercel.app/password-generator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mycybertools.vercel.app/base64-tool</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mycybertools.vercel.app/uuid-generator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mycybertools.vercel.app/json-formatter</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mycybertools.vercel.app/qr-generator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mycybertools.vercel.app/password-strength-checker</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mycybertools.vercel.app/url-encoder-decoder</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mycybertools.vercel.app/jwt-decoder</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-  <url>
-    <loc>https://mycybertools.vercel.app/ip-checker</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- NETWORK TOOLS -->
+  <url><loc>https://mycybertools.vercel.app/ip-checker</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mycybertools.vercel.app/ip-geolocation</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mycybertools.vercel.app/dns-lookup</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-  <url>
-    <loc>https://mycybertools.vercel.app/base64-tool</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- IMAGE TOOL -->
+  <url><loc>https://mycybertools.vercel.app/exif-viewer</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-  <url>
-    <loc>https://mycybertools.vercel.app/uuid-generator</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://mycybertools.vercel.app/json-formatter</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://mycybertools.vercel.app/qr-generator</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://mycybertools.vercel.app/password-strength-checker</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://mycybertools.vercel.app/url-encoder-decoder</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://mycybertools.vercel.app/jwt-decoder</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://mycybertools.vercel.app/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://mycybertools.vercel.app/privacy-policy</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-  <url>
-    <loc>https://mycybertools.vercel.app/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
+  <!-- STATIC PAGES -->
+  <url><loc>https://mycybertools.vercel.app/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mycybertools.vercel.app/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://mycybertools.vercel.app/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
 </urlset>

@@ -23,7 +23,9 @@ import Contact from "./pages/Contact";
 import PasswordStrengthChecker from "./pages/PasswordStrengthChecker";
 import URLEncoderDecoder from "./pages/UrlEncoderDecoder";
 import JWTDecoder from "./pages/JWTDecoder";
-
+import IPGeolocation from "./pages/IPGeolocation";
+import ExifViewer from "./pages/ExifViewer";
+import DNSLookup from "./pages/DNSLookup";
 
 
 ReactDOM.createRoot(
@@ -68,9 +70,20 @@ ReactDOM.createRoot(
 />
 
 <Route
+  path="/ip-geolocation"
+  element={<IPGeolocation />}
+/>
+<Route path="/exif-viewer" 
+element={<ExifViewer />} />
+<Route path="/dns-lookup" 
+element={<DNSLookup />} />
+
+<Route
   path="/qr-generator"
   element={<QRGenerator />}
 />
+
+
 
 
 <Route

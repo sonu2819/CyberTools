@@ -6,24 +6,23 @@ export default function App() {
   return (
 <>
 
-  <Helmet>
+ <Helmet>
 
-    <title>
-      CyberTools - Free Online Developer Tools
-    </title>
+  <title>
+    CyberTools - Free Online Developer & Network Tools
+  </title>
 
-   <meta
-  name="description"
-  content="Free online developer and cybersecurity tools including Password Generator, Password Strength Checker, JWT Decoder, URL Encoder Decoder, JSON Formatter, QR Generator, UUID Generator, IP Checker and Base64 Tool."
-/>
+  <meta
+    name="description"
+    content="Free online developer, network and cybersecurity tools including Password Generator, Password Strength Checker, JWT Decoder, URL Encoder Decoder, JSON Formatter, QR Generator, UUID Generator, My IP Address, IP Geolocation Lookup, DNS Lookup, EXIF Metadata Viewer and Base64 Tool."
+  />
 
-    <meta
-  name="keywords"
-  content="cyber tools, jwt decoder, url encoder decoder, password generator, password strength checker, json formatter, qr generator, uuid generator, ip checker, base64 tool, developer tools"
-/>
-    
+  <meta
+    name="keywords"
+    content="cyber tools, developer tools, network tools, security tools, password generator, password strength checker, jwt decoder, url encoder decoder, json formatter, qr generator, uuid generator, my ip address, ip geolocation lookup, dns lookup, domain lookup, exif viewer, image metadata, base64 tool"
+  />
 
-  </Helmet>
+</Helmet>
 
 
     <div className="app">
@@ -205,6 +204,39 @@ export default function App() {
   </p>
 </a>
 
+
+<a
+  href="/ip-geolocation"
+  className="card link-card"
+>
+  <h2>📍 IP Geolocation</h2>
+
+  <p>
+    Find country, city, coordinates and ISP details from any IP address instantly.
+  </p>
+</a>
+
+<a
+  href="/exif-viewer"
+  className="card link-card"
+>
+  <h2>📸 EXIF Viewer</h2>
+
+  <p>
+    View image metadata like camera, location, date and settings instantly.
+  </p>
+</a>
+
+<a
+  href="/dns-lookup"
+  className="card link-card"
+>
+  <h2>🌐 DNS Lookup</h2>
+
+  <p>
+    Check A, MX, NS and TXT records of any domain instantly.
+  </p>
+</a>
 </section>
 <AdBanner />
 
