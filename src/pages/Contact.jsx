@@ -48,7 +48,7 @@ export default function Contact() {
           </p>
 
           <p>
-          merestro106@email.com
+          merestro106@gmail.com
           </p>
 
         </div>
