@@ -26,6 +26,8 @@ import JWTDecoder from "./pages/JWTDecoder";
 import IPGeolocation from "./pages/IPGeolocation";
 import ExifViewer from "./pages/ExifViewer";
 import DNSLookup from "./pages/DNSLookup";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 
 ReactDOM.createRoot(
@@ -115,6 +117,16 @@ element={<DNSLookup />} />
 />
 
 
+
+<Route
+  path="/blog"
+  element={<Blog />}
+/>
+
+<Route
+  path="/blog/:slug"
+  element={<BlogPost />}
+/>
 
     </Routes>
 

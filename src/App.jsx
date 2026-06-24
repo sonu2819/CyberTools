@@ -63,7 +63,9 @@ export default function App() {
     <a href="/contact">
       Contact
     </a>
-
+    <a href="/blog">
+  Blog
+</a>
   </div>
 
 </header>
@@ -260,6 +262,8 @@ export default function App() {
   <a href="/contact">
     Contact
   </a>
+ {" • "}
+  <a href="/blog">Blog</a>
 
 </footer>
 
