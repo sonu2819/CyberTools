@@ -23,23 +23,25 @@ export default function QRGenerator() {
 
   return (
 <>
+<Helmet>
 
-      <Helmet>
+  <title>
+    Free QR Code Generator - Create QR Codes Online | CyberTools
+  </title>
 
-    <title>
-      QR Code Generator - CyberTools
-    </title>
-
-    <meta
-      name="description"
-      content="Generate QR codes online instantly for URLs, text and business use."
-    />
   <meta
-  name="keywords"
-  content="QR code generator, free QR generator, online QR tool"
+    name="description"
+    content="Generate free QR codes online instantly for URLs, text, Wi-Fi, contact information, business cards, social media links and more. Fast, secure and easy QR code generator."
   />
 
-  </Helmet>
+  <meta
+    name="keywords"
+    content="QR code generator, free QR generator, online QR tool, free QR code generator, online QR code generator, create QR code, QR generator, generate QR code, QR code maker, QR code creator, URL QR code generator, text QR code generator, WiFi QR code generator, QR code for website, QR code for business, QR code online, QR code creator free"
+  />
+
+</Helmet>
+     
+
 
     <div className="app tool-page">
 

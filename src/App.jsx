@@ -22,6 +22,11 @@ export default function App() {
     content="cyber tools, developer tools, network tools, security tools, password generator, password strength checker, jwt decoder, url encoder decoder, json formatter, qr generator, uuid generator, my ip address, ip geolocation lookup, dns lookup, domain lookup, exif viewer, image metadata, base64 tool"
   />
 
+   <link
+    rel="canonical"
+    href="https://mycybertools.vercel.app/"
+  />
+
 </Helmet>
 
 
@@ -63,9 +68,7 @@ export default function App() {
     <a href="/contact">
       Contact
     </a>
-    <a href="/blog">
-  Blog
-</a>
+    
   </div>
 
 </header>
@@ -262,8 +265,7 @@ export default function App() {
   <a href="/contact">
     Contact
   </a>
- {" • "}
-  <a href="/blog">Blog</a>
+
 
 </footer>
 
