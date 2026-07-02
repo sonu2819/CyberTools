@@ -67,7 +67,7 @@ export default function QRGenerator() {
             </button>
 
             {qr && (
-              <div className="output">
+              <div className="output" id="ghost">
                 <img
                   src={qr}
                   alt="Generated QR Code"

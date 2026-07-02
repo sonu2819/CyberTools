@@ -850,7 +850,7 @@ input[type="file"]::file-selector-button:hover {
 
 
 
-.output{
+#ghost{
   display: flex;
   justify-content: center;
   align-items: center;
