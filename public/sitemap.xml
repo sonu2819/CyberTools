@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- HOME -->
@@ -24,8 +23,13 @@
   <url><loc>https://mycybertools.vercel.app/ip-geolocation</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://mycybertools.vercel.app/dns-lookup</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-  <!-- IMAGE TOOL -->
+  <!-- IMAGE TOOLS -->
   <url><loc>https://mycybertools.vercel.app/exif-viewer</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mycybertools.vercel.app/image-compressor</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mycybertools.vercel.app/image-to-pdf</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- HASH TOOL -->
+  <url><loc>https://mycybertools.vercel.app/hash-generator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
   <!-- STATIC PAGES -->
   <url><loc>https://mycybertools.vercel.app/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>

@@ -26,6 +26,9 @@ import JWTDecoder from "./pages/JWTDecoder";
 import IPGeolocation from "./pages/IPGeolocation";
 import ExifViewer from "./pages/ExifViewer";
 import DNSLookup from "./pages/DNSLookup";
+import  ImageCompressor from "./pages/ImageCompressor";
+import ImageToPDF from "./pages/ImageToPdf";
+import HashGenerator from "./pages/HashGenerator";
 
 
 ReactDOM.createRoot(
@@ -83,7 +86,14 @@ element={<DNSLookup />} />
   element={<QRGenerator />}
 />
 
+<Route path="/image-compressor" 
+element={<ImageCompressor />} />
 
+<Route path="/image-to-pdf"
+element={<ImageToPDF/>} />
+
+<Route path="/hash-generator" 
+element={<HashGenerator />} />
 
 
 <Route

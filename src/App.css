@@ -769,3 +769,90 @@ textarea {
 .info-section ul {
   padding-left: 20px;
 }
+
+
+/* css of image-compressor */
+
+.image-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  margin-right: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #3b82f6;
+}
+
+
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.preview-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 10px;
+  text-align: center;
+}
+
+.preview-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.remove-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #dc2626;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.remove-btn:hover {
+  background: #b91c1c;
+}
+
+
+
+
+.output{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

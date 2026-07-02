@@ -12,15 +12,13 @@ export default function App() {
     CyberTools - Free Online Developer & Network Tools
   </title>
 
-  <meta
-    name="description"
-    content="Free online developer, network and cybersecurity tools including Password Generator, Password Strength Checker, JWT Decoder, URL Encoder Decoder, JSON Formatter, QR Generator, UUID Generator, My IP Address, IP Geolocation Lookup, DNS Lookup, EXIF Metadata Viewer and Base64 Tool."
-  />
+ <meta name="description" 
+ content="Free online developer, network and cybersecurity tools including Password Generator, Password Strength Checker, JWT Decoder, URL Encoder Decoder, JSON Formatter, QR Generator, UUID Generator, My IP Address, IP Geolocation Lookup, DNS Lookup, EXIF Metadata Viewer and Base64 Tool. Image Compressor, Image to PDF Converter and HTTP Header Viewer. Hash Generator (MD5, SHA-1, SHA-256) for secure hashing and data fingerprinting." 
+ />
 
-  <meta
-    name="keywords"
-    content="cyber tools, developer tools, network tools, security tools, password generator, password strength checker, jwt decoder, url encoder decoder, json formatter, qr generator, uuid generator, my ip address, ip geolocation lookup, dns lookup, domain lookup, exif viewer, image metadata, base64 tool"
-  />
+<meta name="keywords" 
+content="cyber tools, developer tools, network tools, security tools, password generator, password strength checker, jwt decoder, url encoder decoder, json formatter, qr generator, uuid generator, my ip address, ip geolocation lookup, dns lookup, domain lookup, exif viewer, image metadata, base64 tool, image compressor, image to pdf, header viewer, hash generator, md5 generator, sha1 generator, sha256 generator, hashing tools, cryptography tools" 
+/>
 
    <link
     rel="canonical"
@@ -240,6 +238,39 @@ export default function App() {
 
   <p>
     Check A, MX, NS and TXT records of any domain instantly.
+  </p>
+</a>
+
+<a
+  href="/image-compressor"
+  className="card link-card"
+>
+  <h2>🖼️ Image Compressor</h2>
+
+  <p>
+    Compress JPG, PNG and WebP images without installing software.
+  </p>
+</a>
+
+<a
+  href="/image-to-pdf"
+  className="card link-card"
+>
+  <h2>📄 Image to PDF</h2>
+
+  <p>
+    Convert one or multiple images into a single PDF instantly.
+  </p>
+</a>
+
+<a
+  href="/hash-generator"
+  className="card link-card"
+>
+  <h2>🔐 Hash Generator</h2>
+
+  <p>
+    Generate MD5, SHA-1 and SHA-256 hashes instantly.
   </p>
 </a>
 </section>
