@@ -1,14 +1,26 @@
-import { useEffect } from "react";
+"use client";
+
+import { useEffect, useRef } from "react";
 
 export default function AdBanner() {
+  const adRef = useRef(null);
+
   useEffect(() => {
     try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {}
+      if (
+        adRef.current &&
+        !adRef.current.getAttribute("data-adsbygoogle-status")
+      ) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    } catch (err) {
+      console.log("AdSense:", err);
+    }
   }, []);
 
   return (
     <ins
+      ref={adRef}
       className="adsbygoogle"
       style={{ display: "block" }}
       data-ad-client="ca-pub-4670338082148900"
