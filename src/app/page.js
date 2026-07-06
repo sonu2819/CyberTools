@@ -95,6 +95,22 @@ export default function Home() {
     <h2>📄 Image to PDF</h2>
     <p>Convert one or multiple images into a single PDF instantly.</p>
   </Link>
+<Link href="/email-breach-checker" className="card link-card">
+  <h2>📧 Email Breach Checker</h2>
+  <p>Check whether your email address has appeared in known data breaches instantly.</p>
+</Link>
+
+<Link href="/unix-to-human" className="card link-card">
+  <h2>⏱️ Unix Timestamp Converter</h2>
+  <p>Convert Unix timestamp to human readable date instantly.</p>
+</Link>
+
+
+
+<Link href="/regex-tester" className="card link-card">
+  <h2>🧪 Regex Tester</h2>
+  <p>Test and debug JavaScript regular expressions instantly.</p>
+</Link>
 
   <Link href="/hash-generator" className="card link-card">
     <h2>🔐 Hash Generator</h2>

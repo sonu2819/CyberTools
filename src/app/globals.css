@@ -172,7 +172,8 @@ a {
 
   background-size:600% 600%;
 
-  -webkit-background-clip:text;
+ background-clip: text;
+-webkit-background-clip: text;;
 
   -webkit-text-fill-color:transparent;
 
@@ -855,4 +856,57 @@ input[type="file"]::file-selector-button:hover {
   justify-content: center;
   align-items: center;
 
+}
+
+
+
+.regex-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.flag-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 14px;
+
+  background: #0f172a;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 999px;
+
+  cursor: pointer;
+  transition: .2s;
+}
+
+.flag-item:hover {
+  border-color: #3b82f6;
+}
+
+.flag-item span {
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.flag-item small {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.flag-item input {
+  margin: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  .result-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 }

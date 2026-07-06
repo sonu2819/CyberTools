@@ -107,23 +107,65 @@ export default function HashGeneratorClient() {
       </section>
 
       {/* INFO */}
-      <section className="info-section">
+      {/* INFO */}
+<section className="info-section">
 
-        <h2>What is Hashing?</h2>
+  <h2>What is Hashing?</h2>
 
-        <p>
-          Hashing converts data into a fixed-length fingerprint. It is used for
-          password storage, file verification, and cybersecurity analysis.
-        </p>
+  <p>
+    Hashing is a process that converts input data (text, passwords, files, etc.)
+    into a fixed-length string using cryptographic algorithms. This output is
+    called a hash and is widely used in cybersecurity, data verification, and
+    password storage systems.
+  </p>
 
-        <h2>Note</h2>
+  <h2>Why Use CyberTools Hash Generator?</h2>
 
-        <p>
-          MD5 is a legacy hashing algorithm and is not secure for modern systems.
-          It is included only for educational purposes.
-        </p>
+  <ul>
+    <li>Generate MD5, SHA-1, and SHA-256 hashes instantly</li>
+    <li>Works completely in your browser (no server upload)</li>
+    <li>Fast and secure client-side processing</li>
+    <li>Useful for developers, students, and security testing</li>
+    <li>No registration or installation required</li>
+    <li>100% free to use</li>
+  </ul>
 
-      </section>
+  <h2>How to Use Hash Generator</h2>
+
+  <ol>
+    <li>Enter any text in the input box</li>
+    <li>Click on “Generate Hash” button</li>
+    <li>View MD5, SHA-1 and SHA-256 results instantly</li>
+    <li>Copy hashes for your development or testing use</li>
+  </ol>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>What is a hash used for?</h3>
+  <p>
+    Hashes are used for password storage, file integrity verification, digital
+    signatures, and security validation in software systems.
+  </p>
+
+  <h3>Is MD5 secure?</h3>
+  <p>
+    No. MD5 is considered outdated and insecure for cryptographic purposes.
+    It is included here only for compatibility and educational use.
+  </p>
+
+  <h3>Are my inputs stored?</h3>
+  <p>
+    No. All hashing is performed locally in your browser. Your data is never
+    sent to any server.
+  </p>
+
+  <h3>Which hash algorithm is best?</h3>
+  <p>
+    SHA-256 is currently considered the most secure among the options provided
+    in this tool.
+  </p>
+
+</section>
 
       <Footer />
 
