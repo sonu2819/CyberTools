@@ -146,21 +146,30 @@ export default function ImageToPDFClient() {
 
         <h2>What is an Image to PDF Converter?</h2>
 
-        <p>
-          An Image to PDF converter allows you to combine one or more images
-          into a single PDF document.
-        </p>
-
+       <p>
+  An Image to PDF Converter is a tool that lets you convert one or more images into a single PDF document quickly and easily. 
+  It supports popular image formats such as JPG, JPEG, PNG, WebP, BMP, GIF and TIFF, making it simple to create professional-quality
+   PDF files from photos, scanned documents, screenshots and other images. Whether you need to merge multiple images into one PDF for work, school or personal use, CyberTools' free Image to PDF Converter provides a fast, secure and private solution that works entirely in your browser without uploading your files or requiring registration.
+      </p>
         <h2>Why Use CyberTools?</h2>
 
-        <ul>
-          <li>Convert JPG, PNG and WebP images to PDF</li>
-          <li>Merge multiple images into one PDF</li>
-          <li>Works entirely in your browser</li>
-          <li>No upload to any server</li>
-          <li>Fast, free and secure</li>
-        </ul>
-
+     <ul>
+  <li>Convert JPG, JPEG, PNG, WebP, BMP, GIF and TIFF images to PDF</li>
+  <li>Merge multiple images into a single PDF document</li>
+  <li>Supports single and multiple image conversion</li>
+  <li>Preserves image quality during PDF conversion</li>
+  <li>Works entirely in your browser</li>
+  <li>No file uploads or cloud storage required</li>
+  <li>Your images stay private on your device</li>
+  <li>Fast, free and secure Image to PDF conversion</li>
+  <li>No registration or account required</li>
+  <li>No software installation needed</li>
+  <li>Create professional-quality PDF files in seconds</li>
+  <li>Instant PDF download after conversion</li>
+  <li>Compatible with Windows, macOS, Linux, Android and iPhone</li>
+  <li>Works in all modern web browsers including Chrome, Edge, Firefox and Safari</li>
+  <li>Simple, clean and beginner-friendly interface</li>
+</ul>
         <h2>How to Convert Images to PDF</h2>
 
         <ol>
@@ -170,6 +179,29 @@ export default function ImageToPDFClient() {
           <li>Download your PDF instantly.</li>
         </ol>
 
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How do I convert JPG to PDF?</h3>
+<p>
+Upload your JPG images, click Convert to PDF, and download the generated PDF instantly.
+</p>
+
+<h3>Can I merge multiple images into one PDF?</h3>
+<p>
+Yes. Select multiple images and CyberTools will combine them into a single PDF document.
+</p>
+
+<h3>Are my images uploaded?</h3>
+<p>
+No. Everything happens inside your browser. Your images never leave your device.
+</p>
+
+<h3>Is this Image to PDF Converter free?</h3>
+<p>
+Yes. The tool is completely free and does not require registration.
+</p>
       </section>
 
       <Footer />

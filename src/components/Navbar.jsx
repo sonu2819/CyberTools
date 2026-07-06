@@ -5,10 +5,9 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <header className="navbar">
-
-      <div className="logo">
-        ⚡ CyberTools
-      </div>
+    <Link href="/" className="logo">
+  ⚡ CyberTools
+</Link>
 
       <input
         type="checkbox"
