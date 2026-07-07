@@ -147,7 +147,7 @@ export default function RegexTesterClient() {
 
           {error && (
 
-            <div className="result-box">
+            <div className="regex-result">
 
               <h3>Error</h3>
 
@@ -159,7 +159,7 @@ export default function RegexTesterClient() {
 
           {!error && (
 
-           <div className="result-box">
+           <div className="regex-result">
 
   <div className="result-header">
 

@@ -858,25 +858,24 @@ input[type="file"]::file-selector-button:hover {
 
 }
 
-
-
 .regex-flags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
   margin: 15px 0;
 }
 
 .flag-item {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 
-  padding: 8px 14px;
+  width: 100%;
+  padding: 10px 14px;
 
   background: #0f172a;
   border: 1px solid rgba(255,255,255,.08);
-  border-radius: 999px;
+  border-radius: 10px;
 
   cursor: pointer;
   transition: .2s;
@@ -898,15 +897,32 @@ input[type="file"]::file-selector-button:hover {
 
 .flag-item input {
   margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .regex-flags {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .regex-flags {
+    grid-template-columns: 1fr;
+  }
 }
 
 
 
+
 @media (max-width: 768px) {
-  .result-box {
+  .regex-result {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
 }
+
+
