@@ -1,72 +1,112 @@
 "use client";
 
 import { useState } from "react";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function EmailBreachCheckerClient() {
-
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
 
-  const checkEmail = async () => {
+ const checkEmail = async () => {
+  if (!email.trim()) return;
 
-    if (!email) return;
+  setLoading(true);
+  setError("");
+  setResult(null);
 
-    setLoading(true);
-    setResult(null);
-    setError("");
+  try {
+    const res = await fetch(
+      `https://api.xposedornot.com/v1/check-email/${encodeURIComponent(email)}`
+    );
 
-    try {
+    const data = await res.json();
 
-      const res = await fetch(
-        `https://api.xposedornot.com/v1/check-email/${encodeURIComponent(email)}`
-      );
-
-      const data = await res.json();
-
-      if (data.status === "success") {
-        setResult(data);
-      } else {
-        setError("No breach found for this email.");
-      }
-
-    } catch {
-
-      setError("Something went wrong. Please try again.");
-
+    // Success
+    if (data.status === "success") {
+      setResult(data);
+    }
+    // No breach found
+    else {
+      setError("No breach found for this email.");
     }
 
+  } catch (err) {
+    console.error(err);
+    setError("Something went wrong. Please try again.");
+  } finally {
     setLoading(false);
+  }
+};
 
+  // Normalize breaches into an array
+  const getBreaches = () => {
+    if (!result) return [];
+
+    let value = result.breaches;
+
+    if (!value) return [];
+
+    // Nested array
+    if (Array.isArray(value) && Array.isArray(value[0])) {
+      value = value[0];
+    }
+
+    // Single string inside array
+    if (
+      Array.isArray(value) &&
+      value.length === 1 &&
+      typeof value[0] === "string"
+    ) {
+      value = value[0];
+    }
+
+    // Comma separated string
+    if (typeof value === "string") {
+      return value
+        .split(",")
+        .map((x) => x.trim())
+        .filter(Boolean);
+    }
+
+    // Normal array
+    if (Array.isArray(value)) {
+      return value.map((item) => {
+        if (typeof item === "string") return item;
+
+        if (typeof item === "object") {
+          return (
+            item.breach ||
+            item.name ||
+            item.breach_name ||
+            JSON.stringify(item)
+          );
+        }
+
+        return String(item);
+      });
+    }
+
+    return [];
   };
+
+  const breaches = getBreaches();
 
   return (
     <main className="app tool-page">
-
       <Navbar />
 
-      {/* HERO */}
-
       <section className="hero">
-
         <h1>Free Email Breach Checker</h1>
-
         <p>
           Check whether your email address has appeared in known data breaches.
         </p>
-
       </section>
 
-      {/* TOOL */}
-
       <section className="layout">
-
         <div className="card">
-
           <h2>📧 Email Breach Checker</h2>
 
           <input
@@ -74,6 +114,7 @@ export default function EmailBreachCheckerClient() {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && checkEmail()}
           />
 
           <button
@@ -85,106 +126,50 @@ export default function EmailBreachCheckerClient() {
           </button>
 
           {error && (
-            <div className="result-box">
-              <p>{error}</p>
+            <div className="result-box error">
+              {error}
             </div>
           )}
 
           {result && (
-            <div className="result-box">
+  <div className="email-breach-result">
 
-              <h3>Email Found in Breaches</h3>
+    <h3 className="email-breach-title">
+      🚨 Email Found in Breaches
+    </h3>
 
-              <p>
-                <strong>Email:</strong> {result.email}
-              </p>
+    <div className="email-breach-info">
+      <span>Email</span>
+      <strong>{result.email}</strong>
+    </div>
 
-              <h4>Breaches</h4>
+    <div className="email-breach-info">
+      <span>Total Breaches</span>
+      <strong>{breaches.length}</strong>
+    </div>
 
-              <ul>
+    <h4 className="email-breach-subtitle">
+      Affected Websites
+    </h4>
 
-                {result.breaches[0].map((breach) => (
-                  <li key={breach}>{breach}</li>
-                ))}
-
-              </ul>
-
-            </div>
-          )}
-
+    <div className="email-breach-grid">
+      {breaches.map((breach, index) => (
+        <div
+          className="email-breach-card"
+          key={index}
+          title={breach}
+        >
+          {breach.replace(/([a-z])([A-Z])/g, "$1 $2")}
         </div>
+      ))}
+    </div>
 
-      </section>
-
-      {/* INFO */}
-
-      <section className="info-section">
-
-        <h2>What is an Email Breach Checker?</h2>
-
-        <p>
-          An Email Breach Checker lets you determine whether your email
-          address has appeared in publicly known data breaches. If a website
-          or service you used suffered a security incident, your email may
-          have been exposed along with other personal information.
-        </p>
-
-        <h2>Why Use CyberTools?</h2>
-
-        <ul>
-          <li>Instant email breach lookup</li>
-          <li>Powered by the XposedOrNot database</li>
-          <li>No registration required</li>
-          <li>Simple and easy to use</li>
-          <li>Works on desktop and mobile devices</li>
-          <li>Completely free</li>
-          <li>Fast results</li>
-          <li>Improve your online security awareness</li>
-        </ul>
-
-        <h2>How to Check an Email for Breaches</h2>
-
-        <ol>
-          <li>Enter your email address.</li>
-          <li>Click <strong>Check Email</strong>.</li>
-          <li>Wait a few seconds.</li>
-          <li>Review whether your email appears in known breaches.</li>
-        </ol>
-
-        <h2>Frequently Asked Questions</h2>
-
-        <h3>Is this Email Breach Checker free?</h3>
-
-        <p>
-          Yes. You can check your email for known data breaches completely free.
-        </p>
-
-        <h3>Will my email be stored?</h3>
-
-        <p>
-          No. CyberTools does not store your email address. The lookup is
-          performed using the XposedOrNot public API.
-        </p>
-
-        <h3>What should I do if my email is found?</h3>
-
-        <p>
-          Change passwords for affected accounts, enable two-factor
-          authentication, and monitor your accounts for suspicious activity.
-        </p>
-
-        <h3>Does a breached email mean my account is hacked?</h3>
-
-        <p>
-          Not necessarily. It means your email appeared in a known breach.
-          Changing passwords and enabling additional security measures is
-          strongly recommended.
-        </p>
-
+  </div>
+)}
+        </div>
       </section>
 
       <Footer />
-
     </main>
   );
 }

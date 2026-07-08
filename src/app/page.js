@@ -121,7 +121,9 @@ export default function Home() {
 
     
 
-      <AdBanner />
+       <div style={{ margin: "40px 0", width: "100%" }}>
+        <AdBanner />
+      </div>
 
       <Footer />
     </>
