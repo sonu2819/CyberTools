@@ -2,10 +2,14 @@ import ImageToPDFClient from "./ImageToPDFClient";
 
 export const metadata = {
   title:
-    "Image to PDF Converter - Convert JPG, PNG & WebP to PDF Online Free | CyberTools",
+    "Image to PDF Converter - Convert JPG, PNG & WebP to PDF Online Free",
 
   description:
     "Convert JPG, JPEG, PNG, WebP, BMP, GIF and TIFF images to PDF online for free. Merge multiple images into one high-quality PDF instantly. Fast, secure and works entirely in your browser.",
+
+  alternates: {
+    canonical: "/image-to-pdf",
+  },
 
   keywords: [
     "image to pdf",
@@ -33,7 +37,7 @@ export const metadata = {
     "online pdf converter",
     "free pdf converter",
     "browser pdf converter",
-    "CyberTools image to pdf"
+    "CyberTools image to pdf",
   ],
 };
 
