@@ -126,48 +126,69 @@ export default function IPGeolocationClient() {
       </section>
 
       {/* INFO */}
-      <section className="info-section">
+     {/* INFO */}
+<section className="info-section">
 
-        <h2>What is IP Geolocation?</h2>
+  <h2>What is an IP Geolocation Lookup?</h2>
 
-        <p>
-          IP Geolocation estimates the physical location of a public IP address.
-          It can identify the country, region, city, internet service provider
-          and other network details associated with an IP.
-        </p>
+  <p>
+    An IP Geolocation Lookup helps you find the approximate location and network
+    information associated with any public IPv4 or IPv6 address. CyberTools
+    instantly displays details such as the country, region, city, timezone,
+    latitude, longitude and Internet Service Provider (ISP), making it useful
+    for networking, cybersecurity, website analytics and troubleshooting.
+  </p>
 
-        <h2>Information You Can Find</h2>
+  <h2>Why Use CyberTools?</h2>
 
-        <ul>
-          <li>Country and country code</li>
-          <li>State or region</li>
-          <li>City</li>
-          <li>Latitude and longitude</li>
-          <li>Postal code</li>
-          <li>Timezone</li>
-          <li>Internet Service Provider (ISP)</li>
-        </ul>
+  <ul>
+    <li>Lookup any public IPv4 or IPv6 address</li>
+    <li>View country, region, city and postal code information</li>
+    <li>Find latitude, longitude and timezone</li>
+    <li>Identify the Internet Service Provider (ISP) or organization</li>
+    <li>Useful for networking, cybersecurity and website analysis</li>
+    <li>Fast and easy IP address lookup</li>
+    <li>No registration or software installation required</li>
+    <li>Works on Windows, macOS, Linux, Android and iPhone</li>
+    <li>Free to use anytime</li>
+  </ul>
 
-        <h2>Common Uses</h2>
+  <h2>How to Lookup an IP Address</h2>
 
-        <ul>
-          <li>Investigate IP addresses.</li>
-          <li>Verify VPN or proxy locations.</li>
-          <li>Troubleshoot network connections.</li>
-          <li>Analyze website visitors.</li>
-          <li>Learn basic networking and cybersecurity.</li>
-        </ul>
+  <ol>
+    <li>Enter a valid public IPv4 or IPv6 address.</li>
+    <li>Click <strong>Lookup IP</strong>.</li>
+    <li>View the location, network and ISP information instantly.</li>
+  </ol>
 
-        <h2>How to Use</h2>
+  <h2>Frequently Asked Questions</h2>
 
-        <ol>
-          <li>Enter a public IPv4 or IPv6 address.</li>
-          <li>Click <strong>Lookup IP</strong>.</li>
-          <li>View the location and network information instantly.</li>
-        </ol>
+  <h3>What information can an IP Geolocation Lookup provide?</h3>
+  <p>
+    It can display the approximate country, region, city, postal code,
+    timezone, latitude, longitude and Internet Service Provider (ISP)
+    associated with a public IP address.
+  </p>
 
-      </section>
+  <h3>Can I find the exact location of an IP address?</h3>
+  <p>
+    No. IP geolocation provides an approximate location based on publicly
+    available network data. It cannot determine a user's exact street address
+    or precise physical location.
+  </p>
 
+  <h3>Does this tool work with both IPv4 and IPv6 addresses?</h3>
+  <p>
+    Yes. CyberTools supports lookups for both public IPv4 and IPv6 addresses.
+  </p>
+
+  <h3>Is the IP Geolocation Lookup free?</h3>
+  <p>
+    Yes. CyberTools IP Geolocation Lookup is completely free to use and requires
+    no registration.
+  </p>
+
+</section>
       <Footer />
 
     </main>

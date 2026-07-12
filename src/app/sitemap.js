@@ -21,6 +21,7 @@ export default function sitemap() {
     "/email-breach-checker",
     "/unix-to-human",
     "/regex-tester",
+    "/youtube-trends",
     "/about",
     "/privacy-policy",
     "/contact",

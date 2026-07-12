@@ -116,6 +116,10 @@ export default function Home() {
     <h2>🔐 Hash Generator</h2>
     <p>Generate MD5, SHA-1 and SHA-256 hashes instantly.</p>
   </Link>
+  <Link href="/youtube-trends" className="card link-card">
+  <h2>📺 YouTube Trend Finder</h2>
+  <p>Discover trending YouTube videos by keyword and country instantly.</p>
+</Link>
 
 </section>
 
