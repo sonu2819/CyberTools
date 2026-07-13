@@ -1178,3 +1178,72 @@ select option{
   background:#0f172a;
   color:#fff;
 }
+
+.whois-result {
+  margin-top: 25px;
+  padding: 24px;
+  background: #10131a;
+  border: 1px solid #2b3445;
+  border-radius: 12px;
+  color: #e5e7eb;
+}
+
+.whois-result h3 {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  border-bottom: 1px solid #2b3445;
+  padding-bottom: 10px;
+}
+
+.whois-result p {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.whois-result p b {
+  min-width: 180px;
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.whois-result ul {
+  margin: 12px 0 24px;
+  padding-left: 20px;
+}
+
+.whois-result li {
+  margin: 8px 0;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.whois-result a {
+  color: #38bdf8;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.whois-result a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .whois-result {
+    padding: 18px;
+  }
+
+  .whois-result p {
+    display: block;
+  }
+
+  .whois-result p b {
+    display: block;
+    min-width: auto;
+    margin-bottom: 4px;
+  }
+}

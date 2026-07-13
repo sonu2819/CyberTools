@@ -16,7 +16,9 @@
     "next": "16.2.10",
     "qrcode": "^1.5.4",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "whois": "^2.16.2",
+    "whois-api-js": "^1.0.0"
   },
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0",

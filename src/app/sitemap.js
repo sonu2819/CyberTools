@@ -22,6 +22,7 @@ export default function sitemap() {
     "/unix-to-human",
     "/regex-tester",
     "/youtube-trends",
+    "/whois",
     "/about",
     "/privacy-policy",
     "/contact",
