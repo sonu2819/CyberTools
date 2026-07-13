@@ -8,7 +8,28 @@ export const metadata = {
     "Convert JPG, JPEG, PNG, WebP, BMP, GIF and TIFF images to PDF online for free. Merge multiple images into one high-quality PDF instantly. Fast, secure and works entirely in your browser.",
 
   alternates: {
-    canonical: "/image-to-pdf",
+    canonical: "https://mycybertools.vercel.app/image-to-pdf",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: "Image to PDF Converter",
+    description:
+      "Convert JPG, PNG, WebP and other images into a PDF online for free.",
+    url: "https://mycybertools.vercel.app/image-to-pdf",
+    siteName: "CyberTools",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Image to PDF Converter",
+    description:
+      "Convert JPG, PNG, WebP and other images into a PDF online for free.",
   },
 
   keywords: [
@@ -19,12 +40,8 @@ export const metadata = {
     "free image to pdf",
     "jpg to pdf",
     "jpeg to pdf",
-    "jpg to pdf converter",
-    "convert jpg to pdf",
     "png to pdf",
-    "png to pdf converter",
     "webp to pdf",
-    "webp to pdf converter",
     "bmp to pdf",
     "gif to pdf",
     "tiff to pdf",
@@ -33,11 +50,6 @@ export const metadata = {
     "combine images into pdf",
     "photos to pdf",
     "picture to pdf",
-    "create pdf from images",
-    "online pdf converter",
-    "free pdf converter",
-    "browser pdf converter",
-    "CyberTools image to pdf",
   ],
 };
 
