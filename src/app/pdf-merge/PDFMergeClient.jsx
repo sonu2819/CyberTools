@@ -18,6 +18,15 @@ export default function PDFMergeClient() {
   const removeFile = (index) => {
     setFiles(files.filter((_, i) => i !== index));
   };
+  const shortenName = (name, maxLength = 28) => {
+  if (name.length <= maxLength) return name;
+
+  const dotIndex = name.lastIndexOf(".");
+  const extension = dotIndex !== -1 ? name.slice(dotIndex) : "";
+  const baseName = dotIndex !== -1 ? name.slice(0, dotIndex) : name;
+
+  return `${baseName.slice(0, maxLength - extension.length - 3)}...${extension}`;
+};
 
   const mergePDFs = async () => {
     if (files.length < 2) {
@@ -92,30 +101,37 @@ export default function PDFMergeClient() {
             <b>Selected Files:</b> {files.length}
           </p>
 
-          {files.length > 0 && (
-            <div className="preview-grid">
-              {files.map((file, index) => (
-                <div className="preview-card" key={index}>
-                  <p
-                    style={{
-                      wordBreak: "break-word",
-                      fontSize: "14px",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    📄 {file.name}
-                  </p>
+          
+        {files.length > 0 && (
+  <div className="preview-grid">
+    {files.map((file, index) => (
+      <div className="preview-card" key={index}>
+        <p
+          title={file.name}
+          style={{
+            fontSize: "14px",
+            marginBottom: "12px",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            width: "100%",
+            textAlign: "center",
+            fontWeight: "500",
+          }}
+        >
+          📑 {shortenName(file.name)}
+        </p>
 
-                  <button
-                    className="remove-btn"
-                    onClick={() => removeFile(index)}
-                  >
-                    Remove
-                  </button>
-                </div>
-              ))}
-            </div>
-          )}
+        <button
+          className="remove-btn"
+          onClick={() => removeFile(index)}
+        >
+          Remove
+        </button>
+      </div>
+    ))}
+  </div>
+)}
 
           <button
             className="main-btn"
