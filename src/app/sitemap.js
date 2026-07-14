@@ -23,6 +23,7 @@ export default function sitemap() {
     "/regex-tester",
     "/youtube-trends",
     "/whois",
+    "/pdf-merge",
     "/about",
     "/privacy-policy",
     "/contact",

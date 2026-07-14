@@ -20,8 +20,7 @@ export const metadata = {
     template: "%s | CyberTools",
   },
 
-  description:
-   "Free Cyber Tools provides fast online utilities for developers, students and cybersecurity learners. Use password generator, IP checker, Base64 encoder, UUID generator, JSON formatter, QR generator, JWT decoder, DNS lookup, EXIF viewer, image compressor, hash generator and more.",
+  description:"Free Cyber Tools provides fast online utilities for developers, students and cybersecurity learners. Use Password Generator, IP Checker, Base64 Encoder, UUID Generator, JSON Formatter, QR Generator, JWT Decoder, DNS Lookup, Whois Lookup, EXIF Viewer, Image Compressor, Image to PDF Converter, PDF Merge, Hash Generator, Email Breach Checker, Unix Timestamp Converter, Regex Tester, YouTube Trend Finder and more.",
 
  keywords: [
     "free cyber tools",
@@ -49,6 +48,14 @@ export const metadata = {
     "regex tester",
     "hash generator",
     "YouTube trend finder",
+    "whois lookup",
+    "domain whois lookup",
+    "whois checker",
+    "pdf merge",
+    "merge pdf",
+    "pdf merger",
+    "combine pdf",
+    "join pdf",
   ],
 
   authors: [{ name: "CyberTools" }],

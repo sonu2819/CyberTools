@@ -5,8 +5,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "CyberTools - Free Online Developer & Network Tools",
-  description:
-    "Free online developer, network and cybersecurity tools including Password Generator, JSON Formatter, QR Generator, Base64 tools and more.",
+  description:"Free online PDF, developer, network and cybersecurity tools including Merge PDF, Image to PDF, Whois Lookup, Password Generator, JSON Formatter, QR Generator, DNS Lookup, IP Checker, Image Compressor, Base64 Tool, UUID Generator, JWT Decoder, Regex Tester, EXIF Viewer, Email Breach Checker and more.",
 };
 
 export default function Home() {
@@ -119,6 +118,16 @@ export default function Home() {
   <Link href="/youtube-trends" className="card link-card">
   <h2>📺 YouTube Trend Finder</h2>
   <p>Discover trending YouTube videos by keyword and country instantly.</p>
+</Link>
+
+<Link href="/whois" className="card link-card">
+  <h2>🌍 Whois Lookup</h2>
+  <p>Check domain registration details, registrar, nameservers, creation date, expiration date and WHOIS records instantly.</p>
+</Link>
+
+<Link href="/pdf-merge" className="card link-card">
+  <h2>📑 Merge PDF</h2>
+  <p>Combine multiple PDF files into a single document online for free without losing quality.</p>
 </Link>
 
 </section>
